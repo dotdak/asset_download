@@ -5,7 +5,10 @@ on:
       - '*'
 jobs:
   release:
+    name: Release
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
